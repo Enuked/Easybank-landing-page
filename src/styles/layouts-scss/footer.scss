@@ -1,0 +1,119 @@
+@import "./global.scss";
+
+.footer-container {
+  background-color: $Dark-Blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  gap: 25px;
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    @media (min-width: 768px) {
+      gap: 40px;
+    }
+    > img {
+      width: 111px;
+    }
+  }
+  .socials {
+    display: flex;
+    gap: 10px;
+    li {
+      a {
+        cursor: pointer;
+        display: inline-block; /* Ensure anchor tags have a width and height */
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      span {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .facebook {
+        background-image: url("../../../public/images/icon-facebook.svg");
+        &:hover {
+          background-image: url("../../../public/images/icon-facebook\ copy.svg");
+        }
+      }
+      .youtube {
+        background-image: url("../../../public/images/icon-youtube.svg");
+        &:hover {
+          background-image: url("../../../public/images/icon-youtube\ copy.svg");
+        }
+      }
+      .twitter {
+        background-image: url("../../../public/images/icon-twitter.svg");
+        &:hover {
+          background-image: url("../../../public/images/icon-twitter\ copy.svg");
+        }
+      }
+      .pinterest {
+        background-image: url("../../../public/images/icon-pinterest.svg");
+        &:hover {
+          background-image: url("../../../public/images/icon-pinterest\ copy.svg");
+        }
+      }
+      .instagram {
+        background-image: url("../../../public/images/icon-instagram.svg");
+        &:hover {
+          background-image: url("../../../public/images/icon-instagram\ copy.svg");
+        }
+      }
+    }
+  }
+  .menu-columns {
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 10px;
+      color: white;
+      @media (min-width: 768px) {
+        text-align: left;
+      }
+    }
+    h3 {
+      font-weight: 200;
+    }
+  }
+  .footer-right {
+    button {
+      padding: 10px 20px 10px 20px;
+      width: 142px;
+      font-size: 12px;
+      border-radius: 50px;
+      cursor: pointer;
+      background: $button-gradient;
+      color: $White;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 100px 30px 130px;
+    gap: 163px;
+
+    .menu-columns {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 4;
+    }
+    .footer-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+}

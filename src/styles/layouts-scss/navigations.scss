@@ -1,0 +1,101 @@
+@import "./global.scss";
+
+.nav-parent {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px;
+  > img {
+    height: 100%;
+  }
+  @media (min-width: 768px) {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .hamburger {
+    background-image: url("../../../public/images/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 15px;
+    background-color: white;
+    transition: background-image 0.3s ease;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+  .menu-list {
+    display: none;
+    transition: background-image 0.3s ease;
+
+    @media (min-width: 768px) {
+      display: flex;
+      gap: 30px;
+      cursor: pointer;
+      li {
+        border-bottom: 2px solid transparent;
+        margin: 0;
+        padding-bottom: 10px;
+        transition: border-color 0.3s ease;
+        a {
+          text-decoration: none;
+          list-style: none;
+          color: $Grayish-Blue;
+        }
+      }
+
+      :hover {
+        border-color: $Lime-Green;
+      }
+    }
+  }
+
+  &.active {
+    .hamburger {
+      background-image: url("../../../public/images/icon-close.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 20px;
+      height: 15px;
+      background-position: center;
+    }
+
+    .menu-list {
+      background-color: white;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 14%;
+      width: 325px;
+      gap: 20px;
+      border-radius: 5px;
+      padding: 20px 0 20px 0;
+      align-items: center;
+
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+  button {
+    border-style: none;
+    cursor: pointer;
+  }
+  .req-button {
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+      padding: 15px 20px 15px 20px;
+      width: 142px;
+      font-size: 12px;
+      border-radius: 50px;
+      cursor: pointer;
+      background: $button-gradient;
+      color: $White;
+    }
+  }
+}

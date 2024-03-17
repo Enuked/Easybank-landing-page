@@ -1,0 +1,59 @@
+@import "./global.scss";
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  background-color: $Light-Grayish-Blue;
+  gap: 70px;
+  padding: 60px 20px 60px 20px;
+  .why {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    > h1 {
+      font-size: 33px;
+      font-weight: 300;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+  .cons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    > h3 {
+      font-weight: 400;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .contents-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 41px;
+  }
+  @media (min-width: 768px) {
+    padding: 60px 100px 60px 100px;
+    .cons {
+      display: flex;
+      align-items: flex-start;
+      text-align: left;
+    }
+    .why {
+      display: flex;
+      align-items: flex-start;
+      width: 579px;
+      text-align: start;
+    }
+    .contents-icons {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
